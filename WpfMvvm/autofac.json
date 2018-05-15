@@ -1,0 +1,18 @@
+﻿{
+  "defaultAssembly": "WpfMvvm",
+  "components": [
+    { "type": "WpfMvvm.ViewModels.AppViewModel" },
+    { "type": "WpfMvvm.ViewModels.TestViewModel" },
+    {
+      "type": "WpfMvvm.Services.TestServiceOne",
+      "services": [
+        {
+          "type": "WpfMvvm.Services.ITestService"
+        }
+      ]
+    }
+  ]
+}
+
+//Autofac configuration docs
+//http://autofac.readthedocs.io/en/latest/configuration/xml.html#configuring-with-microsoft-configuration-4-0

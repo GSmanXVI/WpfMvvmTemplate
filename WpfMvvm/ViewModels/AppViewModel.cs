@@ -8,7 +8,7 @@ namespace WpfMvvm.ViewModels
 {
     class AppViewModel : ViewModelBase
     {
-        //Properties
+        #region Properties
         private ViewModelBase currentPage;
         public ViewModelBase CurrentPage
         {
@@ -22,13 +22,13 @@ namespace WpfMvvm.ViewModels
             get => testText;
             set => Set(ref testText, value);
         }
+        #endregion
 
-
-        //Dependencies
+        #region Dependencies
         INavigationService navigationService;
+        #endregion
 
-
-        //Constructors
+        #region Constructors
         public AppViewModel(INavigationService navigationService)
         {
             this.navigationService = navigationService;
@@ -40,6 +40,7 @@ namespace WpfMvvm.ViewModels
             Messenger.Default.Register<TestMessage>(this,
                 param => MessageBox.Show(param.Text, "Message from TestVM to AppVM")
             );
-        }
+        } 
+        #endregion
     }
 }

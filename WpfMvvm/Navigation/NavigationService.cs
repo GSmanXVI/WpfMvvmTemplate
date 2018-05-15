@@ -7,16 +7,11 @@ namespace WpfMvvm.Navigation
 {
     class NavigationService : INavigationService
     {
-        //Fields
         private Dictionary<VM, ViewModelBase> pages = new Dictionary<VM, ViewModelBase>();
         private Stack<VM> history = new Stack<VM>();
 
-
-        //Properties
         public ViewModelBase Current { get; set; }
 
-
-        //Methods
         public void NavigateTo(VM name)
         {
             try

@@ -9,15 +9,18 @@ namespace WpfMvvm.ViewModels
 {
     class TestViewModel : ViewModelBase
     {
+        #region Dependencies
         private readonly ITestService testService;
+        #endregion
 
-
+        #region Constructors
         public TestViewModel(ITestService testService)
         {
             this.testService = testService;
         }
+        #endregion
 
-
+        #region Commands
         private RelayCommand<string> messageCommand;
         public RelayCommand<string> MessageCommand
         {
@@ -38,6 +41,7 @@ namespace WpfMvvm.ViewModels
                     param => MessageBox.Show(testService.Test())
                 ));
             }
-        }
+        } 
+        #endregion
     }
 }

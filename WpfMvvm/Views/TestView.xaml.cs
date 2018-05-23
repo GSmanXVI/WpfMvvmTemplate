@@ -22,7 +22,7 @@ namespace WpfMvvm.Views
     {
         public TestView()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }

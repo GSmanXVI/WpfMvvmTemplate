@@ -81,6 +81,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -111,15 +112,20 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Messages\TestMessage.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Navigation\INavigationService.cs" />
     <Compile Include="Navigation\VM.cs" />
     <Compile Include="Services\ITestService.cs" />
     <Compile Include="Navigation\NavigationService.cs" />
     <Compile Include="Services\TestServiceOne.cs" />
     <Compile Include="Services\TestServiceTwo.cs" />
+    <Compile Include="Tools\Extensions.cs" />
+    <Compile Include="Tools\PropertyChangedNotification.cs" />
+    <Compile Include="Tools\ValidObservableObject.cs" />
     <Compile Include="Tools\ViewModelLocator.cs" />
     <Compile Include="ViewModels\AppViewModel.cs" />
     <Compile Include="ViewModels\TestViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBaseValidation.cs" />
     <Compile Include="Views\AppView.xaml.cs">
       <DependentUpon>AppView.xaml</DependentUpon>
     </Compile>
@@ -171,8 +177,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
